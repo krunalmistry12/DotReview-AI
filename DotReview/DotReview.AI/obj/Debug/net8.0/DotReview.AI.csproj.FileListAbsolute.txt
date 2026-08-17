@@ -1,0 +1,17 @@
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.AI.deps.json
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.AI.dll
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.AI.pdb
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.Application.dll
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.Application.pdb
+D:\Github\DotReview AI\DotReview\DotReview.AI\bin\Debug\net8.0\DotReview.Domain.pdb
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.csproj.AssemblyReference.cache
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.AssemblyInfoInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.AssemblyInfo.cs
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.csproj.CoreCompileInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotRevie.4CE9A807.Up2Date
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.dll
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\refint\DotReview.AI.dll
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.pdb
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\ref\DotReview.AI.dll

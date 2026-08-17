@@ -1,0 +1,17 @@
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Infrastructure.deps.json
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Infrastructure.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Infrastructure.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Application.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Application.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\bin\Debug\net8.0\DotReview.Domain.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.csproj.AssemblyReference.cache
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.AssemblyInfoInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.AssemblyInfo.cs
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotRevie.89C13C4E.Up2Date
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\refint\DotReview.Infrastructure.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\ref\DotReview.Infrastructure.dll

@@ -1,0 +1,11 @@
+D:\Github\DotReview AI\DotReview\DotReview.Domain\bin\Debug\net8.0\DotReview.Domain.deps.json
+D:\Github\DotReview AI\DotReview\DotReview.Domain\bin\Debug\net8.0\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.Domain\bin\Debug\net8.0\DotReview.Domain.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.AssemblyInfoInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.AssemblyInfo.cs
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.csproj.CoreCompileInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\refint\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.pdb
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\ref\DotReview.Domain.dll
