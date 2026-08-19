@@ -1,1 +1,5 @@
-#c#
+public class globals{
+  public globals(){
+    
+  }
+}
