@@ -16,6 +16,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DotReview.API.Controllers.GitHubWebhookController",
+    "Method": "ReceiveWebhook",
+    "RelativePath": "api/github/webhook",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DotReview.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

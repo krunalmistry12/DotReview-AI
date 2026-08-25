@@ -36,6 +36,18 @@
         }
       }
     },
+    "/api/github/webhook": {
+      "post": {
+        "tags": [
+          "GitHubWebhook"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [

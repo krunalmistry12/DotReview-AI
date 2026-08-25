@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotReview.AI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a8c47fa94ad608b5c2f18d72238ba8df164d50f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc15b7c3182d944670b8b15d751239a9921b9f79")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotReview.AI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotReview.AI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
