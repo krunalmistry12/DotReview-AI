@@ -85,3 +85,4 @@ D:\Github\DotReview AI\DotReview\DotReview.API\bin\Debug\net8.0\ru\Microsoft.Cod
 D:\Github\DotReview AI\DotReview\DotReview.API\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Github\DotReview AI\DotReview\DotReview.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Github\DotReview AI\DotReview\DotReview.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Github\DotReview AI\DotReview\DotReview.API\obj\Debug\net8.0\DotReview.API.sourcelink.json

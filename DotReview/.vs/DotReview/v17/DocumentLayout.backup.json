@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\services\\codereviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\services\\issuefingerprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\services\\issuefingerprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\interface\\iissuefingerprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\interface\\iissuefingerprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\services\\rules\\nplusonequeryrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\services\\rules\\nplusonequeryrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\services\\rules\\sqlinjectionrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\interface\\icodereviewscoringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\interface\\icodereviewscoringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\services\\rules\\avoidunfilteredtolistrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|solutionrelative:dotreview.application\\services\\rules\\avoidunfilteredtolistrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7CDF267-467B-4386-9FFC-F97461E5B9FD}|DotReview.Application\\DotReview.Application.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.application\\interface\\icodereviewrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,6 +83,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "IssueFingerprintService.cs",
+              "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\IssueFingerprintService.cs",
+              "RelativeDocumentMoniker": "DotReview.Application\\Services\\IssueFingerprintService.cs",
+              "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\IssueFingerprintService.cs",
+              "RelativeToolTip": "DotReview.Application\\Services\\IssueFingerprintService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwAoAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T16:23:02.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IIssueFingerprintService.cs",
+              "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Interface\\IIssueFingerprintService.cs",
+              "RelativeDocumentMoniker": "DotReview.Application\\Interface\\IIssueFingerprintService.cs",
+              "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Interface\\IIssueFingerprintService.cs",
+              "RelativeToolTip": "DotReview.Application\\Interface\\IIssueFingerprintService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T16:22:30.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NPlusOneQueryRule.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\Rules\\NPlusOneQueryRule.cs",
               "RelativeDocumentMoniker": "DotReview.Application\\Services\\Rules\\NPlusOneQueryRule.cs",
@@ -90,8 +116,7 @@
               "RelativeToolTip": "DotReview.Application\\Services\\Rules\\NPlusOneQueryRule.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T17:17:42.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T17:17:42.08Z"
             },
             {
               "$type": "Document",
@@ -103,46 +128,19 @@
               "RelativeToolTip": "DotReview.AI\\Services\\GeminiService.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAuwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:23:41.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:23:41.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Program.cs",
               "RelativeDocumentMoniker": "DotReview.API\\Program.cs",
               "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Program.cs",
               "RelativeToolTip": "DotReview.API\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T16:13:09.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AvoidUnfilteredToListRule.cs",
-              "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\Rules\\AvoidUnfilteredToListRule.cs",
-              "RelativeDocumentMoniker": "DotReview.Application\\Services\\Rules\\AvoidUnfilteredToListRule.cs",
-              "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\Rules\\AvoidUnfilteredToListRule.cs",
-              "RelativeToolTip": "DotReview.Application\\Services\\Rules\\AvoidUnfilteredToListRule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAYwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:48:17.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CodeReviewController.cs",
-              "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\CodeReviewController.cs",
-              "RelativeDocumentMoniker": "DotReview.API\\Controllers\\CodeReviewController.cs",
-              "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\CodeReviewController.cs",
-              "RelativeToolTip": "DotReview.API\\Controllers\\CodeReviewController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:12:44.315Z",
               "EditorCaption": ""
             },
             {
@@ -153,14 +151,14 @@
               "RelativeDocumentMoniker": "DotReview.Application\\Services\\CodeReviewService.cs",
               "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\CodeReviewService.cs",
               "RelativeToolTip": "DotReview.Application\\Services\\CodeReviewService.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAuwJcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAuwFIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-17T16:12:11.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SqlInjectionRule.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\Rules\\SqlInjectionRule.cs",
               "RelativeDocumentMoniker": "DotReview.Application\\Services\\Rules\\SqlInjectionRule.cs",
@@ -168,8 +166,7 @@
               "RelativeToolTip": "DotReview.Application\\Services\\Rules\\SqlInjectionRule.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA8wCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T17:06:12.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T17:06:12.678Z"
             },
             {
               "$type": "Document",
@@ -181,12 +178,11 @@
               "RelativeToolTip": "DotReview.Application\\Interface\\IGeminiService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:27:12.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:27:12.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ICodeReviewScoringService.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Interface\\ICodeReviewScoringService.cs",
               "RelativeDocumentMoniker": "DotReview.Application\\Interface\\ICodeReviewScoringService.cs",
@@ -194,12 +190,11 @@
               "RelativeToolTip": "DotReview.Application\\Interface\\ICodeReviewScoringService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T17:01:30.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T17:01:30.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CodeReviewScoringService.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\Services\\Scoring\\CodeReviewScoringService.cs",
               "RelativeDocumentMoniker": "DotReview.Application\\Services\\Scoring\\CodeReviewScoringService.cs",
@@ -207,8 +202,7 @@
               "RelativeToolTip": "DotReview.Application\\Services\\Scoring\\CodeReviewScoringService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T17:02:15.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T17:02:15.134Z"
             },
             {
               "$type": "Document",
@@ -220,8 +214,7 @@
               "RelativeToolTip": "DotReview.Application\\Interface\\ICodeReviewRule.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:47:02.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:47:02.916Z"
             },
             {
               "$type": "Document",
@@ -233,8 +226,7 @@
               "RelativeToolTip": "DotReview.Application\\Interface\\ICodeReviewService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:11:52.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:11:52.307Z"
             },
             {
               "$type": "Document",
@@ -246,8 +238,7 @@
               "RelativeToolTip": "DotReview.Domain\\Entities\\CodeReviewIssue.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:09:25.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:09:25.834Z"
             },
             {
               "$type": "Document",
@@ -259,8 +250,7 @@
               "RelativeToolTip": "DotReview.AI\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:01:16.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:01:16.2Z"
             },
             {
               "$type": "Document",
@@ -272,8 +262,7 @@
               "RelativeToolTip": "DotReview.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T16:00:43.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T16:00:43.374Z"
             },
             {
               "$type": "Document",
@@ -285,8 +274,7 @@
               "RelativeToolTip": "DotReview.Application\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T15:59:41.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T15:59:41.76Z"
             },
             {
               "$type": "Document",
@@ -298,8 +286,7 @@
               "RelativeToolTip": "DotReview.Domain\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-17T15:58:56.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T15:58:56.35Z"
             }
           ]
         }

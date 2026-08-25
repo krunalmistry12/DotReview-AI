@@ -15,3 +15,4 @@ D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotRe
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\refint\DotReview.Infrastructure.dll
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.pdb
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\ref\DotReview.Infrastructure.dll
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.sourcelink.json

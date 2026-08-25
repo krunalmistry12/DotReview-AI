@@ -9,3 +9,4 @@ D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Dom
 D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\refint\DotReview.Domain.dll
 D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.pdb
 D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\ref\DotReview.Domain.dll
+D:\Github\DotReview AI\DotReview\DotReview.Domain\obj\Debug\net8.0\DotReview.Domain.sourcelink.json

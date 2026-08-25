@@ -30,6 +30,10 @@ builder.Services.AddScoped<ICodeReviewRule, SqlInjectionRule>();
 builder.Services.AddScoped<
     ICodeReviewRule,
     NPlusOneQueryRule>();
+
+builder.Services.AddScoped<
+    IIssueFingerprintService,
+    IssueFingerprintService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

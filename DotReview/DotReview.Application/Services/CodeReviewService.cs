@@ -9,21 +9,24 @@ public class CodeReviewService : ICodeReviewService
     private readonly IGeminiService _geminiService;
     private readonly IEnumerable<ICodeReviewRule> _rules;
     private readonly ICodeReviewScoringService _scoringService;
+    private readonly IIssueFingerprintService _fingerprintService;
 
     public CodeReviewService(
         IGeminiService geminiService,
         IEnumerable<ICodeReviewRule> rules,
-        ICodeReviewScoringService scoringService)
+        ICodeReviewScoringService scoringService,
+        IIssueFingerprintService fingerprintService)
     {
         _geminiService = geminiService;
         _rules = rules;
         _scoringService = scoringService;
+        _fingerprintService = fingerprintService;
     }
 
     public async Task<CodeReviewResponse> ReviewCodeAsync(
         CodeReviewRequest request)
     {
-        // 1. Run deterministic rules
+        // 1. Run deterministic/static rules
         var ruleViolations = new List<RuleViolationResponse>();
 
         foreach (var rule in _rules)
@@ -54,7 +57,7 @@ public class CodeReviewService : ICodeReviewService
                 "Unable to parse AI response.");
         }
 
-        // 3. Convert Rule Engine results
+        // 3. Convert static rule violations
         var ruleIssues = ruleViolations
             .Select(x => new CodeReviewIssueResponse
             {
@@ -68,24 +71,17 @@ public class CodeReviewService : ICodeReviewService
             })
             .ToList();
 
-        // 4. Merge Rule Engine + AI
+        // 4. Merge static rules + AI issues
         var mergedIssues = ruleIssues
             .Concat(result.Issues)
             .ToList();
 
-        // 5. Remove duplicate issues
-        var finalIssues = new List<CodeReviewIssueResponse>();
-
-        foreach (var issue in mergedIssues)
-        {
-            var duplicate = finalIssues.Any(existing =>
-                AreDuplicateIssues(existing, issue));
-
-            if (!duplicate)
-            {
-                finalIssues.Add(issue);
-            }
-        }
+        // 5. Remove duplicate issues using fingerprints
+        var finalIssues = mergedIssues
+            .GroupBy(issue =>
+                _fingerprintService.GetFingerprint(issue))
+            .Select(group => group.First())
+            .ToList();
 
         // 6. Set final issues
         result.Issues = finalIssues;
@@ -94,84 +90,7 @@ public class CodeReviewService : ICodeReviewService
         result.Score = _scoringService.CalculateScore(
             result.Issues);
 
+        // 8. Return final review
         return result;
-    }
-
-    private static bool AreDuplicateIssues(
-        CodeReviewIssueResponse first,
-        CodeReviewIssueResponse second)
-    {
-        // If both have the same static rule ID,
-        // they are definitely duplicates.
-        if (!string.IsNullOrWhiteSpace(first.RuleId) &&
-            !string.IsNullOrWhiteSpace(second.RuleId) &&
-            first.RuleId == second.RuleId)
-        {
-            return true;
-        }
-
-        var firstMessage = NormalizeMessage(first.Message);
-        var secondMessage = NormalizeMessage(second.Message);
-
-        // N+1 is a code-level issue.
-        // Line number may differ between Rule Engine and AI.
-        if (IsNPlusOneIssue(firstMessage) &&
-            IsNPlusOneIssue(secondMessage))
-        {
-            return true;
-        }
-
-        // SQL Injection
-        if (IsSqlInjectionIssue(firstMessage) &&
-            IsSqlInjectionIssue(secondMessage))
-        {
-            return true;
-        }
-
-        // For other issues, use line + category.
-        if (first.LineNumber != second.LineNumber)
-        {
-            return false;
-        }
-
-        if (!string.Equals(
-                first.Category,
-                second.Category,
-                StringComparison.OrdinalIgnoreCase))
-        {
-            return false;
-        }
-
-        if (IsUnfilteredQueryIssue(firstMessage) &&
-            IsUnfilteredQueryIssue(secondMessage))
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-    private static string NormalizeMessage(string message)
-    {
-        return message
-            .Trim()
-            .ToLowerInvariant();
-    }
-
-    private static bool IsNPlusOneIssue(string message)
-    {
-        return message.Contains("n+1") ||
-               message.Contains("n + 1");
-    }
-
-    private static bool IsSqlInjectionIssue(string message)
-    {
-        return message.Contains("sql injection");
-    }
-
-    private static bool IsUnfilteredQueryIssue(string message)
-    {
-        return message.Contains("unfiltered database") ||
-               message.Contains("unrestricted data retrieval");
     }
 }

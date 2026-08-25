@@ -13,3 +13,4 @@ D:\Github\DotReview AI\DotReview\DotReview.Application\obj\Debug\net8.0\DotRevie
 D:\Github\DotReview AI\DotReview\DotReview.Application\obj\Debug\net8.0\refint\DotReview.Application.dll
 D:\Github\DotReview AI\DotReview\DotReview.Application\obj\Debug\net8.0\DotReview.Application.pdb
 D:\Github\DotReview AI\DotReview\DotReview.Application\obj\Debug\net8.0\ref\DotReview.Application.dll
+D:\Github\DotReview AI\DotReview\DotReview.Application\obj\Debug\net8.0\DotReview.Application.sourcelink.json
