@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Github\\DotReview AI\\DotReview\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\controllers\\githubwebhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\controllers\\githubwebhookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CC25F25-E26A-487D-B034-F4FD387E55BA}|DotReview.API\\DotReview.API.csproj|solutionrelative:dotreview.api\\controllers\\codereviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{724FE44A-5234-47BA-BE28-983EB0E554FB}|DotReview.Tests\\DotReview.Tests.csproj|d:\\github\\dotreview ai\\dotreview\\dotreview.tests\\services\\codereviewscoringservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,30 +106,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GitHubWebhookController.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\GitHubWebhookController.cs",
               "RelativeDocumentMoniker": "DotReview.API\\Controllers\\GitHubWebhookController.cs",
               "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\GitHubWebhookController.cs",
               "RelativeToolTip": "DotReview.API\\Controllers\\GitHubWebhookController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwEMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-25T17:25:00.884Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CodeReviewController.cs",
               "DocumentMoniker": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\CodeReviewController.cs",
               "RelativeDocumentMoniker": "DotReview.API\\Controllers\\CodeReviewController.cs",
               "ToolTip": "D:\\Github\\DotReview AI\\DotReview\\DotReview.API\\Controllers\\CodeReviewController.cs",
               "RelativeToolTip": "DotReview.API\\Controllers\\CodeReviewController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-25T17:08:31.611Z",
               "EditorCaption": ""
@@ -156,8 +156,7 @@
               "RelativeToolTip": "DotReview.Tests\\Services\\CodeReviewScoringServiceTests.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAQwCoAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-25T16:35:55.441Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-25T16:35:55.441Z"
             },
             {
               "$type": "Document",
