@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotReview.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffdffc5881d23677fbcf05bdc3bd1c0b93ff1640")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+680c2aa294721954c669bf65022af0b4c76c48a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotReview.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotReview.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
