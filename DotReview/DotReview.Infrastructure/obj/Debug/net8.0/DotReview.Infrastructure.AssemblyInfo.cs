@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotReview.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+680c2aa294721954c669bf65022af0b4c76c48a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dd16e3eefd58e5e765db1bb8425a6ecb21e7961")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotReview.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotReview.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
