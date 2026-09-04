@@ -1,4 +1,5 @@
 using DotReview.AI.Services;
+using DotReview.API.Background;
 using DotReview.API.Services;
 using DotReview.Application.Interface;
 using DotReview.Application.Services;
@@ -33,7 +34,9 @@ builder.Services.AddHttpClient<GitHubService>();
 builder.Services.AddScoped<
     IIssueFingerprintService,
     IssueFingerprintService>();
+builder.Services.AddSingleton<IReviewQueue, ReviewQueue>();
 
+builder.Services.AddHostedService<ReviewWorker>();
 var app = builder.Build();
 
 // 2. CRITICAL: Trust the proxy headers coming from ngrok before any routing/redirection

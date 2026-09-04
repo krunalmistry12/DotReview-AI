@@ -1,7 +1,5 @@
 ﻿using System.Text.Json;
-using DotReview.API.Services;
-using DotReview.Application.DTOs;
-using DotReview.Application.Interface;
+using DotReview.API.Background;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotReview.API.Controllers;
@@ -10,21 +8,19 @@ namespace DotReview.API.Controllers;
 [Route("api/github")]
 public class GitHubWebhookController : ControllerBase
 {
-    private readonly GitHubService _githubService;
-    private readonly ICodeReviewService _codeReviewService;
+    private readonly IReviewQueue _reviewQueue;
 
     public GitHubWebhookController(
-        GitHubService githubService,
-        ICodeReviewService codeReviewService)
+        IReviewQueue reviewQueue)
     {
-        _githubService = githubService;
-        _codeReviewService = codeReviewService;
+        _reviewQueue = reviewQueue;
     }
 
     [HttpPost("webhook")]
     public async Task<IActionResult> ReceiveWebhook()
     {
         using var reader = new StreamReader(Request.Body);
+
         var body = await reader.ReadToEndAsync();
 
         if (string.IsNullOrWhiteSpace(body))
@@ -38,43 +34,57 @@ public class GitHubWebhookController : ControllerBase
         try
         {
             using var json = JsonDocument.Parse(body);
+
             var root = json.RootElement;
 
-            // GitHub PR action
+            // GitHub action
             var action =
-                root.TryGetProperty("action", out var actionElement)
+                root.TryGetProperty(
+                    "action",
+                    out var actionElement)
                     ? actionElement.GetString()
                     : null;
 
-            // Pull request number
+            // PR number
             var number =
-                root.TryGetProperty("pull_request", out var prObj) &&
-                prObj.TryGetProperty("number", out var numberElement)
+                root.TryGetProperty(
+                    "pull_request",
+                    out var prObj) &&
+                prObj.TryGetProperty(
+                    "number",
+                    out var numberElement)
                     ? numberElement.GetInt32()
                     : 0;
 
-            // Repository name
+            // Repository
             var repositoryName =
-                root.TryGetProperty("repository", out var repository) &&
-                repository.TryGetProperty("full_name", out var fullName)
+                root.TryGetProperty(
+                    "repository",
+                    out var repository) &&
+                repository.TryGetProperty(
+                    "full_name",
+                    out var fullName)
                     ? fullName.GetString()
                     : null;
 
             // PR title
             var title =
                 prObj.ValueKind != JsonValueKind.Undefined &&
-                prObj.TryGetProperty("title", out var titleElement)
+                prObj.TryGetProperty(
+                    "title",
+                    out var titleElement)
                     ? titleElement.GetString()
                     : null;
 
-            // Only process opened/synchronize PR events
-            if (action != "opened" && action != "synchronize")
+            // Only review opened/synchronize PRs
+            if (action != "opened" &&
+                action != "synchronize")
             {
                 return Ok(new
                 {
-                    message = "Webhook received but no code review required.",
-                    action,
-                    pullRequestNumber = number
+                    message =
+                        "Webhook received. No review required.",
+                    action
                 });
             }
 
@@ -82,7 +92,8 @@ public class GitHubWebhookController : ControllerBase
             {
                 return BadRequest(new
                 {
-                    message = "Repository name not found."
+                    message =
+                        "Repository name not found."
                 });
             }
 
@@ -90,65 +101,43 @@ public class GitHubWebhookController : ControllerBase
             {
                 return BadRequest(new
                 {
-                    message = "Pull request number not found."
+                    message =
+                        "Pull request number not found."
                 });
             }
 
-            var repositoryParts = repositoryName.Split('/');
+            var repositoryParts =
+                repositoryName.Split('/');
 
             if (repositoryParts.Length != 2)
             {
                 return BadRequest(new
                 {
-                    message = "Invalid repository name."
+                    message =
+                        "Invalid repository name."
                 });
             }
 
             var owner = repositoryParts[0];
+
             var repo = repositoryParts[1];
 
-            // 1. Get PR diff from GitHub
-            var diff = await _githubService.GetPullRequestDiffAsync(
-                owner,
-                repo,
-                number);
+            // Add review job to background queue
+            await _reviewQueue.QueueAsync(
+                new ReviewJob(
+                    owner,
+                    repo,
+                    number));
 
-            if (string.IsNullOrWhiteSpace(diff))
-            {
-                return Ok(new
-                {
-                    message = "PR received but no code changes found.",
-                    action,
-                    pullRequestNumber = number,
-                    repository = repositoryName,
-                    title
-                });
-            }
-
-            // 2. Create code review request
-    //        var reviewRequest = new CodeReviewRequest
-    //        {
-    //            Language = "C#",
-    //            Code = diff.Length > 20000
-    //? diff[..20000]
-    //: diff
-    //        };
-
-    //        // 3. Run existing code review pipeline
-    //        var reviewResult =
-    //            await _codeReviewService.ReviewCodeAsync(reviewRequest);
-
-            // 4. Return review result for testing
+            // Immediately return 200
             return Ok(new
             {
-                message = "Pull request reviewed successfully.",
+                message =
+                    "Pull request received and queued for review.",
                 action,
                 pullRequestNumber = number,
                 repository = repositoryName,
-                title,
-                diffLength = diff.Length,
-                //reviewedCodeLength = Math.Min(diff.Length, 20000),
-                //review = reviewResult
+                title
             });
         }
         catch (JsonException)
@@ -156,30 +145,6 @@ public class GitHubWebhookController : ControllerBase
             return BadRequest(new
             {
                 message = "Invalid JSON payload."
-            });
-        }
-        catch (HttpRequestException ex)
-        {
-            return StatusCode(500, new
-            {
-                message = "Failed to get PR diff from GitHub.",
-                error = ex.Message
-            });
-        }
-        catch (InvalidOperationException ex)
-        {
-            return StatusCode(500, new
-            {
-                message = "Code review failed.",
-                error = ex.Message
-            });
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new
-            {
-                message = "Unexpected error occurred.",
-                error = ex.Message
             });
         }
     }
