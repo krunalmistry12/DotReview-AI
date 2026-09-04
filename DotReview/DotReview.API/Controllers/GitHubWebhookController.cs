@@ -126,17 +126,17 @@ public class GitHubWebhookController : ControllerBase
             }
 
             // 2. Create code review request
-            var reviewRequest = new CodeReviewRequest
-            {
-                Language = "C#",
-                Code = diff.Length > 20000
-    ? diff[..20000]
-    : diff
-            };
+    //        var reviewRequest = new CodeReviewRequest
+    //        {
+    //            Language = "C#",
+    //            Code = diff.Length > 20000
+    //? diff[..20000]
+    //: diff
+    //        };
 
-            // 3. Run existing code review pipeline
-            var reviewResult =
-                await _codeReviewService.ReviewCodeAsync(reviewRequest);
+    //        // 3. Run existing code review pipeline
+    //        var reviewResult =
+    //            await _codeReviewService.ReviewCodeAsync(reviewRequest);
 
             // 4. Return review result for testing
             return Ok(new
@@ -147,8 +147,8 @@ public class GitHubWebhookController : ControllerBase
                 repository = repositoryName,
                 title,
                 diffLength = diff.Length,
-                reviewedCodeLength = Math.Min(diff.Length, 20000),
-                review = reviewResult
+                //reviewedCodeLength = Math.Min(diff.Length, 20000),
+                //review = reviewResult
             });
         }
         catch (JsonException)
