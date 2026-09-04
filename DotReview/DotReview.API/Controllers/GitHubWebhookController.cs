@@ -129,7 +129,9 @@ public class GitHubWebhookController : ControllerBase
             var reviewRequest = new CodeReviewRequest
             {
                 Language = "C#",
-                Code = diff
+                Code = diff.Length > 20000
+    ? diff[..20000]
+    : diff
             };
 
             // 3. Run existing code review pipeline
@@ -145,6 +147,7 @@ public class GitHubWebhookController : ControllerBase
                 repository = repositoryName,
                 title,
                 diffLength = diff.Length,
+                reviewedCodeLength = Math.Min(diff.Length, 20000),
                 review = reviewResult
             });
         }
