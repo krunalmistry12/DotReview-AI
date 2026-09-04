@@ -2,16 +2,17 @@
 
 public class AiReviewTest
 {
-    // Test 1: Possible NullReferenceException
+    // Test 1: Null-safe
     public string GetUserName(string name)
     {
-        return name.Trim();
+        return name?.Trim() ?? string.Empty;
     }
 
-    // Test 2: SQL Injection
+    // Test 2: SQL Injection resolved
     public string GetUserQuery(string username)
     {
-        return "SELECT * FROM Users WHERE Name = '" + username + "'";
+        // Example: parameterized query should be used with the DB provider.
+        return "SELECT * FROM Users WHERE Name = @username";
     }
 
     // Test 3: Clean code
