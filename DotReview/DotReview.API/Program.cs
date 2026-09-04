@@ -31,6 +31,7 @@ builder.Services.AddScoped<
     ICodeReviewRule,
     NPlusOneQueryRule>();
 builder.Services.AddHttpClient<GitHubService>();
+builder.Services.AddScoped<GitHubDiffParser>();
 builder.Services.AddScoped<
     IIssueFingerprintService,
     IssueFingerprintService>();

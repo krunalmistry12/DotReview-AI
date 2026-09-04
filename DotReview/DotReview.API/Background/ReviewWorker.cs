@@ -50,7 +50,11 @@ public class ReviewWorker : BackgroundService
                     scope.ServiceProvider
                         .GetRequiredService<ICodeReviewService>();
 
-                // Get PR diff
+                var diffParser =
+                    scope.ServiceProvider
+                        .GetRequiredService<GitHubDiffParser>();
+
+                // 1. Get PR diff
                 var diff =
                     await githubService.GetPullRequestDiffAsync(
                         job.Owner,
@@ -66,12 +70,41 @@ public class ReviewWorker : BackgroundService
                     continue;
                 }
 
-                // Temporary limit for testing
-                var codeToReview =
-                    diff.Length > 20000
-                        ? diff[..20000]
-                        : diff;
+                _logger.LogInformation(
+                    "PR #{PullRequestNumber} diff received. Length: {DiffLength}",
+                    job.PullRequestNumber,
+                    diff.Length);
 
+                // 2. Extract only C# changed code
+                var codeToReview =
+                    diffParser.ParseCSharpDiff(diff);
+
+                if (string.IsNullOrWhiteSpace(codeToReview))
+                {
+                    _logger.LogInformation(
+                        "No C# changes found for PR #{PullRequestNumber}.",
+                        job.PullRequestNumber);
+
+                    continue;
+                }
+
+                _logger.LogInformation(
+                    "C# code extracted for PR #{PullRequestNumber}. Length: {CodeLength}",
+                    job.PullRequestNumber,
+                    codeToReview.Length);
+
+                // 3. Temporary safety limit
+                if (codeToReview.Length > 20000)
+                {
+                    codeToReview =
+                        codeToReview[..20000];
+
+                    _logger.LogInformation(
+                        "C# code was limited to 20000 characters for PR #{PullRequestNumber}.",
+                        job.PullRequestNumber);
+                }
+
+                // 4. Create review request
                 var reviewRequest =
                     new CodeReviewRequest
                     {
@@ -79,11 +112,12 @@ public class ReviewWorker : BackgroundService
                         Code = codeToReview
                     };
 
-                // Existing review pipeline
+                // 5. Existing review pipeline
                 var reviewResult =
                     await codeReviewService.ReviewCodeAsync(
                         reviewRequest);
 
+                // 6. Log result
                 _logger.LogInformation(
                     "PR #{PullRequestNumber} reviewed successfully. Score: {Score}, Issues: {IssueCount}",
                     job.PullRequestNumber,

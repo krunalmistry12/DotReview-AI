@@ -37,7 +37,7 @@ public class GitHubWebhookController : ControllerBase
 
             var root = json.RootElement;
 
-            // GitHub action
+            // GitHub PR action
             var action =
                 root.TryGetProperty(
                     "action",
@@ -45,7 +45,7 @@ public class GitHubWebhookController : ControllerBase
                     ? actionElement.GetString()
                     : null;
 
-            // PR number
+            // Pull request number
             var number =
                 root.TryGetProperty(
                     "pull_request",
@@ -56,7 +56,7 @@ public class GitHubWebhookController : ControllerBase
                     ? numberElement.GetInt32()
                     : 0;
 
-            // Repository
+            // Repository full name
             var repositoryName =
                 root.TryGetProperty(
                     "repository",
@@ -68,15 +68,17 @@ public class GitHubWebhookController : ControllerBase
                     : null;
 
             // PR title
-            var title =
-                prObj.ValueKind != JsonValueKind.Undefined &&
+            string? title = null;
+
+            if (prObj.ValueKind != JsonValueKind.Undefined &&
                 prObj.TryGetProperty(
                     "title",
-                    out var titleElement)
-                    ? titleElement.GetString()
-                    : null;
+                    out var titleElement))
+            {
+                title = titleElement.GetString();
+            }
 
-            // Only review opened/synchronize PRs
+            // Only process opened and synchronize events
             if (action != "opened" &&
                 action != "synchronize")
             {
@@ -88,15 +90,16 @@ public class GitHubWebhookController : ControllerBase
                 });
             }
 
+            // Validate repository
             if (string.IsNullOrWhiteSpace(repositoryName))
             {
                 return BadRequest(new
                 {
-                    message =
-                        "Repository name not found."
+                    message = "Repository name not found."
                 });
             }
 
+            // Validate PR number
             if (number <= 0)
             {
                 return BadRequest(new
@@ -106,6 +109,7 @@ public class GitHubWebhookController : ControllerBase
                 });
             }
 
+            // Split owner/repository
             var repositoryParts =
                 repositoryName.Split('/');
 
@@ -113,23 +117,21 @@ public class GitHubWebhookController : ControllerBase
             {
                 return BadRequest(new
                 {
-                    message =
-                        "Invalid repository name."
+                    message = "Invalid repository name."
                 });
             }
 
             var owner = repositoryParts[0];
-
             var repo = repositoryParts[1];
 
-            // Add review job to background queue
+            // Add job to background queue
             await _reviewQueue.QueueAsync(
                 new ReviewJob(
                     owner,
                     repo,
                     number));
 
-            // Immediately return 200
+            // Return immediately to GitHub
             return Ok(new
             {
                 message =
