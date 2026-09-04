@@ -20,9 +20,9 @@ public class GitHubService
     }
 
     public async Task<string> GetPullRequestDiffAsync(
-        string owner,
-        string repo,
-        int pullRequestNumber)
+    string owner,
+    string repo,
+    int pullRequestNumber)
     {
         var url =
             $"https://api.github.com/repos/{owner}/{repo}/pulls/{pullRequestNumber}";
@@ -32,10 +32,8 @@ public class GitHubService
                 HttpMethod.Get,
                 url);
 
-        request.Headers.UserAgent.Add(
-            new ProductInfoHeaderValue(
-                "DotReview-AI",
-                "1.0"));
+        request.Headers.UserAgent.ParseAdd(
+            "DotReview-AI/1.0");
 
         request.Headers.Authorization =
             new AuthenticationHeaderValue(
@@ -46,12 +44,24 @@ public class GitHubService
             new MediaTypeWithQualityHeaderValue(
                 "application/vnd.github.diff"));
 
+        request.Headers.Add(
+            "X-GitHub-Api-Version",
+            "2022-11-28");
+
         var response =
             await _httpClient.SendAsync(request);
 
-        response.EnsureSuccessStatusCode();
+        var responseBody =
+            await response.Content.ReadAsStringAsync();
 
-        return await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new HttpRequestException(
+                $"GitHub API returned {(int)response.StatusCode} " +
+                $"{response.StatusCode}: {responseBody}");
+        }
+
+        return responseBody;
     }
 
     public async Task CreatePullRequestCommentAsync(

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotReview.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e887e80c2a41628598b018fc1b79106ddf9e148c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b427ff61d0a4d53ba91016b6e4367c3095dff6e1")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotReview.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotReview.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

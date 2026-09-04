@@ -10,9 +10,9 @@ D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.Gene
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.AssemblyInfoInputs.cache
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.AssemblyInfo.cs
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.csproj.CoreCompileInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.sourcelink.json
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotRevie.4CE9A807.Up2Date
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.dll
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\refint\DotReview.AI.dll
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.pdb
 D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\ref\DotReview.AI.dll
-D:\Github\DotReview AI\DotReview\DotReview.AI\obj\Debug\net8.0\DotReview.AI.sourcelink.json
