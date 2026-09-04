@@ -3,6 +3,7 @@ using DotReview.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotReview.API.Controllers;
+
 [ApiController]
 [Route("api/github")]
 public class GitHubWebhookController : ControllerBase
@@ -13,6 +14,7 @@ public class GitHubWebhookController : ControllerBase
     {
         _githubService = githubService;
     }
+
     [HttpPost("webhook")]
     public async Task<IActionResult> ReceiveWebhook()
     {
@@ -21,7 +23,10 @@ public class GitHubWebhookController : ControllerBase
 
         if (string.IsNullOrWhiteSpace(body))
         {
-            return BadRequest(new { message = "Webhook payload is empty." });
+            return BadRequest(new
+            {
+                message = "Webhook payload is empty."
+            });
         }
 
         try
@@ -29,25 +34,34 @@ public class GitHubWebhookController : ControllerBase
             using var json = JsonDocument.Parse(body);
             var root = json.RootElement;
 
-            var action = root.TryGetProperty("action", out var actionElement) ? actionElement.GetString() : null;
+            var action =
+                root.TryGetProperty("action", out var actionElement)
+                    ? actionElement.GetString()
+                    : null;
 
-            // Note: In GitHub PR payloads, the top-level 'number' property doesn't always exist 
-            // (it's inside the 'pull_request' object). Safely extract it:
-            var number = root.TryGetProperty("pull_request", out var prObj) && prObj.TryGetProperty("number", out var numEl)
-                ? numEl.GetInt32()
-                : 0;
+            var number =
+                root.TryGetProperty("pull_request", out var prObj) &&
+                prObj.TryGetProperty("number", out var numEl)
+                    ? numEl.GetInt32()
+                    : 0;
 
-            var repositoryName = root.TryGetProperty("repository", out var repository) &&
-                                 repository.TryGetProperty("full_name", out var fullName)
-                ? fullName.GetString()
-                : null;
+            var repositoryName =
+                root.TryGetProperty("repository", out var repository) &&
+                repository.TryGetProperty("full_name", out var fullName)
+                    ? fullName.GetString()
+                    : null;
 
-            var title = prObj.ValueKind != JsonValueKind.Undefined && prObj.TryGetProperty("title", out var titleElement)
-                ? titleElement.GetString()
-                : null;
+            var title =
+                prObj.ValueKind != JsonValueKind.Undefined &&
+                prObj.TryGetProperty("title", out var titleElement)
+                    ? titleElement.GetString()
+                    : null;
+
+            string? diff = null;
+
             if ((action == "opened" || action == "synchronize") &&
-    !string.IsNullOrWhiteSpace(repositoryName) &&
-    number > 0)
+                !string.IsNullOrWhiteSpace(repositoryName) &&
+                number > 0)
             {
                 var repositoryParts = repositoryName.Split('/');
 
@@ -56,28 +70,38 @@ public class GitHubWebhookController : ControllerBase
                     var owner = repositoryParts[0];
                     var repo = repositoryParts[1];
 
-                    var diff = await _githubService.GetPullRequestDiffAsync(
+                    diff = await _githubService.GetPullRequestDiffAsync(
                         owner,
                         repo,
                         number);
-
-                    Console.WriteLine("===== PR DIFF =====");
-                    Console.WriteLine(diff);
-                    Console.WriteLine("==================");
                 }
             }
+
             return Ok(new
             {
                 message = "Pull request webhook received",
                 action,
                 pullRequestNumber = number,
                 repository = repositoryName,
-                title
+                title,
+                diffLength = diff?.Length ?? 0,
+                diff = diff
             });
         }
         catch (JsonException)
         {
-            return BadRequest(new { message = "Invalid JSON payload." });
+            return BadRequest(new
+            {
+                message = "Invalid JSON payload."
+            });
+        }
+        catch (HttpRequestException ex)
+        {
+            return StatusCode(500, new
+            {
+                message = "Failed to get PR diff from GitHub.",
+                error = ex.Message
+            });
         }
     }
 }
