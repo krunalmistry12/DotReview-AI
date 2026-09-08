@@ -10,9 +10,9 @@ D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotRe
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.AssemblyInfoInputs.cache
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.AssemblyInfo.cs
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.sourcelink.json
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotRevie.89C13C4E.Up2Date
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.dll
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\refint\DotReview.Infrastructure.dll
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.pdb
 D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\ref\DotReview.Infrastructure.dll
-D:\Github\DotReview AI\DotReview\DotReview.Infrastructure\obj\Debug\net8.0\DotReview.Infrastructure.sourcelink.json

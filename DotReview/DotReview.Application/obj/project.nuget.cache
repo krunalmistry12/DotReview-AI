@@ -4,7 +4,7 @@
   "success": true,
   "projectFilePath": "D:\\Github\\DotReview AI\\DotReview\\DotReview.Application\\DotReview.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kunal\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\5.9.0\\microsoft.codeanalysis.analyzers.5.9.0.nupkg.sha512",
+    "C:\\Users\\kunal\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\5.9.0-1.26328.17\\microsoft.codeanalysis.analyzers.5.9.0-1.26328.17.nupkg.sha512",
     "C:\\Users\\kunal\\.nuget\\packages\\microsoft.codeanalysis.common\\5.9.0\\microsoft.codeanalysis.common.5.9.0.nupkg.sha512",
     "C:\\Users\\kunal\\.nuget\\packages\\microsoft.codeanalysis.csharp\\5.9.0\\microsoft.codeanalysis.csharp.5.9.0.nupkg.sha512",
     "C:\\Users\\kunal\\.nuget\\packages\\system.buffers\\4.6.1\\system.buffers.4.6.1.nupkg.sha512",
@@ -16,16 +16,5 @@
     "C:\\Users\\kunal\\.nuget\\packages\\system.text.encoding.codepages\\8.0.0\\system.text.encoding.codepages.8.0.0.nupkg.sha512",
     "C:\\Users\\kunal\\.nuget\\packages\\system.threading.tasks.extensions\\4.6.3\\system.threading.tasks.extensions.4.6.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.CodeAnalysis.CSharp 5.9.0 depends on Microsoft.CodeAnalysis.Analyzers (>= 5.9.0-1.26328.17) but Microsoft.CodeAnalysis.Analyzers 5.9.0-1.26328.17 was not found. Microsoft.CodeAnalysis.Analyzers 5.9.0 was resolved instead.",
-      "libraryId": "Microsoft.CodeAnalysis.Analyzers",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

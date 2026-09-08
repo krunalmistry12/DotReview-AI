@@ -14,10 +14,10 @@
           "DotReview.Infrastructure.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Analyzers/5.9.0": {},
+      "Microsoft.CodeAnalysis.Analyzers/5.9.0-1.26328.17": {},
       "Microsoft.CodeAnalysis.Common/5.9.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "5.9.0",
+          "Microsoft.CodeAnalysis.Analyzers": "5.9.0-1.26328.17",
           "System.Buffers": "4.6.1",
           "System.Collections.Immutable": "10.0.1",
           "System.Memory": "4.6.3",
@@ -77,7 +77,7 @@
       },
       "Microsoft.CodeAnalysis.CSharp/5.9.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "5.9.0",
+          "Microsoft.CodeAnalysis.Analyzers": "5.9.0-1.26328.17",
           "Microsoft.CodeAnalysis.Common": "5.9.0",
           "System.Buffers": "4.6.1",
           "System.Collections.Immutable": "10.0.1",
@@ -189,12 +189,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CodeAnalysis.Analyzers/5.9.0": {
+    "Microsoft.CodeAnalysis.Analyzers/5.9.0-1.26328.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jMNOo+uoBGiWbZ6Wx0dqU93r5WD4P5WnIRZdoz67RP5N09OUetHgAbo4L7hihOH1NHdD2TgW5/l+SP4gQukwww==",
-      "path": "microsoft.codeanalysis.analyzers/5.9.0",
-      "hashPath": "microsoft.codeanalysis.analyzers.5.9.0.nupkg.sha512"
+      "sha512": "sha512-HP9NNk8ZjOSI2hgOyXnQg+kv7/X837Vr2nAlXiGAtqtYnYKjRRa1UmQFr8KFs5ynGYKqfbb8zB9APoWjiAGdMg==",
+      "path": "microsoft.codeanalysis.analyzers/5.9.0-1.26328.17",
+      "hashPath": "microsoft.codeanalysis.analyzers.5.9.0-1.26328.17.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/5.9.0": {
       "type": "package",

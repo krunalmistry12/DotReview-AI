@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "Microsoft.CodeAnalysis.Analyzers/5.9.0": {
+      "Microsoft.CodeAnalysis.Analyzers/5.9.0-1.26328.17": {
         "type": "package",
         "build": {
           "buildTransitive/Microsoft.CodeAnalysis.Analyzers.props": {},
@@ -258,10 +258,10 @@
     }
   },
   "libraries": {
-    "Microsoft.CodeAnalysis.Analyzers/5.9.0": {
-      "sha512": "jMNOo+uoBGiWbZ6Wx0dqU93r5WD4P5WnIRZdoz67RP5N09OUetHgAbo4L7hihOH1NHdD2TgW5/l+SP4gQukwww==",
+    "Microsoft.CodeAnalysis.Analyzers/5.9.0-1.26328.17": {
+      "sha512": "HP9NNk8ZjOSI2hgOyXnQg+kv7/X837Vr2nAlXiGAtqtYnYKjRRa1UmQFr8KFs5ynGYKqfbb8zB9APoWjiAGdMg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.analyzers/5.9.0",
+      "path": "microsoft.codeanalysis.analyzers/5.9.0-1.26328.17",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -328,7 +328,7 @@
         "editorconfig/MicrosoftCodeAnalysisReleaseTrackingRulesEnabled/.editorconfig",
         "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
         "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
-        "microsoft.codeanalysis.analyzers.5.9.0.nupkg.sha512",
+        "microsoft.codeanalysis.analyzers.5.9.0-1.26328.17.nupkg.sha512",
         "microsoft.codeanalysis.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -747,17 +747,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.CodeAnalysis.CSharp 5.9.0 depends on Microsoft.CodeAnalysis.Analyzers (>= 5.9.0-1.26328.17) but Microsoft.CodeAnalysis.Analyzers 5.9.0-1.26328.17 was not found. Microsoft.CodeAnalysis.Analyzers 5.9.0 was resolved instead.",
-      "libraryId": "Microsoft.CodeAnalysis.Analyzers",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

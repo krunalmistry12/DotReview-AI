@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DotReview.API.props" />
-</Project>
